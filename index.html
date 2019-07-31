@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- 		<title>Multiple Choice Quiz</title>
+ 		<title>Zander's TEST</title>
  		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
@@ -45,19 +45,19 @@
 
   <h2 id = "A1" class = "answers" ><button id = "answerOne" class = "button" type="button" value = "1" onclick = "selectGame1()"></button></h2>
 
- 
- 
+
+
   <h2 id = "A2" class = "answers"><button id = "answerTwo" class = "button" type="button" value = "2" onclick = "selectGame2()"></button></h2>
 
- 
+
 
   <h2 id = "A3" class = "answers"><button id = "answerThree" class = "button" type="button" value = "3" onclick = "selectGame3()"></button></h2>
 
 
 
   <h2 id = "A4" class = "answers"><button id = "answerFour" class = "button" type="button" value = "4"  onclick = "selectGame4()"></button></h2>
- 
-   
+
+
   <h1 id = "responseNext"><button id = "responseButton" class = "responseButton" type="button" value = "5" ></button></h1>
 
 </div>
@@ -68,7 +68,7 @@
 <audio id="correctAnswerAudio" src="LevelUp.mp3" ></audio>
 <audio id="wrongAnswerAudio" src="VZ2.mp3" ></audio>
 
- 
+
 
 
 
@@ -122,15 +122,15 @@ function gameFourTitle(){return game4Title;}
     gameTwoTitle();
     gameThreeTitle();
     gameFourTitle();
-	
+
 //This is the data for the four games
 	var questions = [["Quid tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "What do you see?"], ["Quis in caelo volat?", "Equus", "Avis", "Canis", "Piscis", "2", "Who flies in the sky?"], ["Quid dicit ovis?", "Baa", "Moo", "Chirp", "Meow", "1", "What does a sheep say?"],["PORTATE, servi, CENAM ex culina.", "The food is carried.", "They carry the food.","Carry the food!", "You will carry the food.","3","Think plural imperative!"],["Montēs in Hispaniā sunt BIG.", "magnus", "magnī", "magnōs", "magna", "2", "Montēs are masculine, plural, and nominative!"],["Canis in viā lentē ambulavit.", "The dog walks slowly in the street", "The dog walked slowly into the street.", "The dog walked slowly in the street", "The slow dog walked slowly in the street.", "3", "In + the ABLATIVE = IN; In + ACCUSATIVE = INTO."],["VOS avēs in caelo spectare potestis.", "You", "We", "Your", "They", "1", "Look at the verb ending to double check your answer!"]];
-	
+
 	var questions1 = [["0 tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "Zero"], ["1 in caelo volat?", "Equus", "Avis", "Canis", "Piscis", "2", "one"], ["2 dicit ovis?", "Baa", "Moo", "Chirp", "Meow", "1", "Two"]];
 
 	 var questions2 = [["WHAT tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "WHAT"], ["WHO in caelo volat?", "Equus", "Avis", "Canis", "Piscis", "2", "WHO"], ["WHAT dicit ovis?", "Baa", "Moo", "Chirp", "Meow", "1", "WHAT2"],["Q", "1", "2", "3", "4", "2", "Hint"]];
 
-	 var questions3 = [["XXXX tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "XXXX"],["Q", "1", "2", "3", "4", "3", "Hint"]]; 
+	 var questions3 = [["XXXX tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "XXXX"],["Q", "1", "2", "3", "4", "3", "Hint"]];
 
 
 
@@ -143,7 +143,7 @@ function resetQuestions(){
 
 	 questions2 = [["WHAT tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "WHAT"], ["WHO in caelo volat?", "Equus", "Avis", "Canis", "Piscis", "2", "WHO"], ["WHAT dicit ovis?", "Baa", "Moo", "Chirp", "Meow", "1", "WHAT2"]];
 
-	 questions3 = [["XXXX tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "XXXX"]]; 
+	 questions3 = [["XXXX tu vides?", "Equum videt.", "Equus me videt.", "Ego equum video.", "Equus me videt.", "3", "XXXX"]];
 
 }
 
@@ -158,10 +158,10 @@ function resetQuestions(){
 
 	 //var randIndex = 0;
 
-	
 
-    
-	 
+
+
+
 
 function gameOverAudio(){
        var gameOverAudio = document.getElementById("gameOverAudio");
@@ -187,7 +187,7 @@ function wrongAnswerAudio(){
     var points = 0;
 
     var pointsPerCorrectAnswer = 10;
-    	 
+
 
 
     function addPoints(){
@@ -204,12 +204,12 @@ function wrongAnswerAudio(){
     }
 
 
-    
+
 //Timer variables
 	var timeleft = 15;
 	var countdown = setInterval(x,1000);
-    
-  
+
+
 
  	function countDownTimer(){
 
@@ -236,13 +236,13 @@ function wrongAnswerAudio(){
 
 function stopTimer() {
 
-	 
+
 	clearInterval(countdown);
-	 
-	 
+
+
 }
 
- 
+
 
 //This randomizes an array. The parameter array takes as its argument the questions.
 
@@ -261,10 +261,10 @@ function shuffle(array){
 	}
 		return array;
 }
-	
 
 
-  
+
+
 function answerSetup(){
 		answerOne.innerHTML = "";
 		answerTwo.innerHTML = "";
@@ -298,7 +298,7 @@ function selectGame2(){
     gameOverAudio();
 }
 
-function selectGame3(){ 
+function selectGame3(){
 
  	startButton.onclick = function(){test2()};
  	startButton.innerHTML = game3Title;
@@ -316,9 +316,9 @@ function selectGame4(){
 
 
 
-   
-   
-    
+
+
+
 
 
 
@@ -336,7 +336,7 @@ function test(){
 	resetAnswerColors();
 
      enableButtons();
-     
+
 
 
      responseButton.innerHTML = "Hint!";
@@ -345,14 +345,14 @@ function test(){
 
 
      //if (answerOne.value == "1") {document.getElementById("boxTwo").innerHTML = "HI!");}
-   
-   
+
+
      var newArray = shuffle(questions);
 
- 
 
 
- 
+
+
 
 
 	if (newArray.length == 0){
@@ -360,21 +360,21 @@ function test(){
 
     	startButton.innerHTML = "Start a New Game!";
 
-    	 
-    
-    	
+
+
+
 		answerOne.innerHTML = game1Title;
 		answerTwo.innerHTML = game2Title;
 		answerThree.innerHTML = game3Title;
 		answerFour.innerHTML = game4Title;
-		
+
 		document.getElementById("boxThree").innerHTML = "Score";
 		responseButton.innerHTML = "You earned " + points + " points!";
 		points = 0;
 
 		stopTimer();
 		document.getElementById("boxOne").innerHTML = "Timer";
-		
+
 		answerOne.onclick = function(){selectGame1()};
 		answerTwo.onclick = function(){selectGame2()};
 		answerThree.onclick = function(){selectGame3()};
@@ -383,10 +383,10 @@ function test(){
 
 		 resetQuestions();
 
-		 
 
-    	 
-    } 
+
+
+    }
 
 	var randomIndex  = Math.floor(Math.random() * newArray.length);
 
@@ -399,15 +399,15 @@ function test(){
 		answerTwo.innerHTML = row[2];
 		answerThree.innerHTML = row[3];
 		answerFour.innerHTML = row[4];
-		correctAnswer = row[5];	
-	 
+		correctAnswer = row[5];
+
 	 var splicedItems = newArray.splice(randomIndex, 1); // this is how to remove an item
 
 	 startButton.disabled = true;
 	 responseButton.onclick = function(){hint()};
-     
-	
-	  
+
+
+
 
 	 function hint(){
 
@@ -415,19 +415,19 @@ function test(){
 	  if (responseButton.value == 5) {
 
 	 	responseButton.innerHTML = row[6];
-	 	
+
 	 }
 	}
 
 
 
-                            
+
 }
 
 
 function test1(){
 
-	
+
 	countDownTimer();
 	timeleft = 15;
 	countdown = setInterval(countDownTimer,1000);
@@ -435,7 +435,7 @@ function test1(){
 	resetAnswerColors();
 
      enableButtons();
-     
+
 
 
      responseButton.innerHTML = "Hint!";
@@ -445,20 +445,20 @@ function test1(){
 
 	 var newArray = shuffle(questions1);
 
-	 	 
+
 
 
 
 	if (newArray.length == 0){
 
-		 
-		
+
+
 
     	startButton.innerHTML = "Start a New Game!";
 
-    	 
-    
-    	
+
+
+
 		answerOne.innerHTML = game1Title;
 		answerTwo.innerHTML = game2Title;
 		answerThree.innerHTML = game3Title;
@@ -477,10 +477,10 @@ function test1(){
 
 		 resetQuestions();
 
-		 
 
-    	 
-    } 
+
+
+    }
 
 	var randomIndex  = Math.floor(Math.random() * newArray.length);
 
@@ -493,15 +493,15 @@ function test1(){
 		answerTwo.innerHTML = row[2];
 		answerThree.innerHTML = row[3];
 		answerFour.innerHTML = row[4];
-		correctAnswer = row[5];	
-	 
+		correctAnswer = row[5];
+
 	 var splicedItems = newArray.splice(randomIndex, 1); // this is how to remove an item
 
 	 startButton.disabled = true;
 	 responseButton.onclick = function(){hint()};
-     
-	
-	  
+
+
+
 
 	 function hint(){
 
@@ -509,17 +509,17 @@ function test1(){
 	  if (responseButton.value == 5) {
 
 	 	responseButton.innerHTML = row[6];
-	 	
+
 	 }
 	}
 
-                                
+
 }
 
 
 function test2(){
 
-	
+
 	countDownTimer();
 	timeleft = 15;
 	countdown = setInterval(countDownTimer,1000);
@@ -527,7 +527,7 @@ function test2(){
 	resetAnswerColors();
 
      enableButtons();
-     
+
 
 
      responseButton.innerHTML = "Hint!";
@@ -537,20 +537,20 @@ function test2(){
 
 	 var newArray = shuffle(questions2);
 
-	 	 
+
 
 
 
 	if (newArray.length == 0){
 
-		 
-		
+
+
 
     	startButton.innerHTML = "Start a New Game!";
 
-    	 
-    
-    	
+
+
+
 		answerOne.innerHTML = game1Title;
 		answerTwo.innerHTML = game2Title;
 		answerThree.innerHTML = game3Title;
@@ -569,10 +569,10 @@ function test2(){
 
 		 resetQuestions();
 
-		 
 
-    	 
-    } 
+
+
+    }
 
 	var randomIndex  = Math.floor(Math.random() * newArray.length);
 
@@ -585,15 +585,15 @@ function test2(){
 		answerTwo.innerHTML = row[2];
 		answerThree.innerHTML = row[3];
 		answerFour.innerHTML = row[4];
-		correctAnswer = row[5];	
-	 
+		correctAnswer = row[5];
+
 	 var splicedItems = newArray.splice(randomIndex, 1); // this is how to remove an item
 
 	 startButton.disabled = true;
 	 responseButton.onclick = function(){hint()};
-     
-	
-	  
+
+
+
 
 	 function hint(){
 
@@ -601,17 +601,17 @@ function test2(){
 	  if (responseButton.value == 5) {
 
 	 	responseButton.innerHTML = row[6];
-	 	
+
 	 }
 	}
 
-                                
+
 }
 
 
 function test3(){
 
-	
+
 	countDownTimer();
 	timeleft = 15;
 	countdown = setInterval(countDownTimer,1000);
@@ -619,7 +619,7 @@ function test3(){
 	resetAnswerColors();
 
      enableButtons();
-     
+
 
 
      responseButton.innerHTML = "Hint!";
@@ -629,20 +629,20 @@ function test3(){
 
 	 var newArray = shuffle(questions3);
 
-	 	 
+
 
 
 
 	if (newArray.length == 0){
 
-		 
-		
+
+
 
     	startButton.innerHTML = "Start a New Game!";
 
-    	 
-    
-    	
+
+
+
 		answerOne.innerHTML = game1Title;
 		answerTwo.innerHTML = game2Title;
 		answerThree.innerHTML = game3Title;
@@ -661,10 +661,10 @@ function test3(){
 
 		 resetQuestions();
 
-		 
 
-    	 
-    } 
+
+
+    }
 
 	var randomIndex  = Math.floor(Math.random() * newArray.length);
 
@@ -677,15 +677,15 @@ function test3(){
 		answerTwo.innerHTML = row[2];
 		answerThree.innerHTML = row[3];
 		answerFour.innerHTML = row[4];
-		correctAnswer = row[5];	
-	 
+		correctAnswer = row[5];
+
 	 var splicedItems = newArray.splice(randomIndex, 1); // this is how to remove an item
 
 	 startButton.disabled = true;
 	 responseButton.onclick = function(){hint()};
-     
-	
-	  
+
+
+
 
 	 function hint(){
 
@@ -693,14 +693,14 @@ function test3(){
 	  if (responseButton.value == 5) {
 
 	 	responseButton.innerHTML = row[6];
-	 	
+
 	 }
 	}
 
-                                
+
 }
 
- 
+
 
 
    function resetAnswerColors(){
@@ -721,9 +721,9 @@ function test3(){
 	answerFour.style.color = "black";
 
 }
-   
 
- 
+
+
 
 function enableButtons(){
 
@@ -740,7 +740,7 @@ function disableButtons(){
 		answerThree.disabled = true;
 		answerFour.disabled = true;
 }
- 
+
 function clickedStartButton(){
 
 	startButton.onclick = countDownTimer();
@@ -809,7 +809,7 @@ function clickedWrongAnswerFourAudio() {
 
 function clickedAnswerOne(){
 
-	   
+
 
 
 	if (correctAnswer == "1") {
@@ -823,19 +823,19 @@ function clickedAnswerOne(){
 		answerOne.style.backgroundColor = "yellow";
 		answerOne.style.border = "yellow";
 		document.getElementById("A1").style.backgroundColor = "yellow";
-		
+
 		responseButton.innerHTML = "Optime!";
 		responseButton.style.color = "yellow";
 		startButton.innerHTML = "Next Question!";
 		startButton.disabled = false;
-		 
-		
+
+
 		unHideResponseNext();
-		 
+
 
 
 	} else {
-		
+
 		clickedWrongAnswerOneAudio();
 		points -= pointsPerCorrectAnswer/2;
 		document.getElementById("boxThree").innerHTML = points;
@@ -847,15 +847,15 @@ function clickedAnswerOne(){
 		responseButton.style.color = "black";
 
 		responseButton.innerHTML = "Eheu!";
-		
-	}	
+
+	}
 
 }
 
 
 function clickedAnswerTwo(){
 
-	 
+
 
 	if (correctAnswer == "2") {
 		clickedCorrectAnswerTwoAudio();
@@ -868,15 +868,15 @@ function clickedAnswerTwo(){
 		answerTwo.style.backgroundColor = "yellow";
 		answerTwo.style.border = "yellow";
 		document.getElementById("A2").style.backgroundColor = "yellow";
-		
+
 		responseButton.innerHTML = "Optime!";
-		responseButton.style.color = "yellow";	
+		responseButton.style.color = "yellow";
 		startButton.innerHTML = "Next Question!";
 		startButton.disabled = false;
-		 
-		
+
+
 		unHideResponseNext();
-	
+
 
 	} else {
 		clickedWrongAnswerTwoAudio();
@@ -890,13 +890,13 @@ function clickedAnswerTwo(){
 		responseButton.style.color = "black";
 
 		responseButton.innerHTML = "Eheu!";
-		
+
 	}
 }
 
 function clickedAnswerThree(){
 
-	 
+
 
 	if (correctAnswer == "3") {
 		clickedCorrectAnswerThreeAudio();
@@ -910,17 +910,17 @@ function clickedAnswerThree(){
 		answerThree.style.border = "yellow";
 		document.getElementById("A3").style.backgroundColor = "yellow";
 		responseButton.innerHTML = "Optime!";
-		
-		responseButton.style.color = "yellow";	
+
+		responseButton.style.color = "yellow";
 		startButton.innerHTML = "Next Question!";
 		startButton.disabled = false;
-		 
-		
+
+
 		unHideResponseNext();
-		
+
 
 	} else {
-		
+
 		clickedWrongAnswerThreeAudio();
 		points -= pointsPerCorrectAnswer/2;
 		document.getElementById("boxThree").innerHTML = points;
@@ -932,7 +932,7 @@ function clickedAnswerThree(){
 		responseButton.style.color = "black";
 
 		responseButton.innerHTML = "Eheu!";
-		
+
 	}
 
 }
@@ -953,17 +953,17 @@ function clickedAnswerFour(){
 		answerFour.style.border = "yellow";
 		document.getElementById("A4").style.backgroundColor = "yellow";
 		responseButton.innerHTML = "Optime!";
-		
-		responseButton.style.color = "yellow";	
+
+		responseButton.style.color = "yellow";
 		startButton.innerHTML = "Next Question!";
 		startButton.disabled = false;
-		
-		
+
+
 		unHideResponseNext();
-		
+
 
 	} else {
-		
+
 		clickedWrongAnswerFourAudio();
 		points -= pointsPerCorrectAnswer/2;
 		document.getElementById("boxThree").innerHTML = points;
@@ -975,7 +975,7 @@ function clickedAnswerFour(){
 		responseButton.style.color = "black";
 
 		responseButton.innerHTML = "Eheu!";
-		
+
 	}
 
 
